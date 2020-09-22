@@ -6,6 +6,3 @@ var mql = window.matchMedia('screen and (min-width: 60em)');if (mql.matches){
 $(document).ready(function(){$("#sidebar-wrapper").theiaStickySidebar({additionalMarginTop:80,additionalMarginBottom:8})});};
 // Youtube Responsive
 setTimeout(function(){$(".video-youtube").each(function(){$(this).replaceWith('<iframe class="video-youtube loader" src="'+$(this).data("src")+'" allowfullscreen="allowfullscreen" height="281" width="500"></iframe>')})},5e3);
-// Disqus
-function load_Comments(){var e=document.getElementById("disqusshow");e.style.display="none";var t="aurallax";!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://"+t+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(e)}()};
-function Display_Reply_Form(r){par_id=$(r).attr("id"),par_id=Valid_Par_Id(par_id),html=$(Cur_Cform_Hdr).html(),".comment_form"==Cur_Cform_Hdr?(reset_html='<a href="#origin_cform" onclick="Reset_Comment_Form()" id="resetcomments">Add Comments</a><a name="origin_cform"/>',$(Cur_Cform_Hdr).html(reset_html)):$(Cur_Cform_Hdr).html(""),Cur_Cform_Hdr="#r_f_c"+par_id,$(Cur_Cform_Hdr).html(html),$("#comment-editor").attr("src",Cform_Ins_ParID(par_id))}
